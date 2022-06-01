@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+box-sizing: border-box;
+    font-family: "raleway"; 
+}
+a {
+    color: inherit ;
+    text-decoration: none ;
+}
+nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+nav a {
+    padding: 2rem;
+    border-top: 3px solid transparent;
+}
+
+.hebergact a:hover {
+    border-top-color: blue;
+    color: blue;
+}
+
+#logo {
+    
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+
+.hebergact {
+    
+ display: flex;}
+
+    @media  (max-width: 800px) {
+    .hebergact { 
+        order: 1;
+        width: 100%;}
+        
+    }
+
+.hebergact a {
+    flex-basis: 50%;
+    text-align: center;
+}
+.hebergact {
+    display: flex;
+}
+.Trouvez {
+    padding: 0 2rem;
+}
+.recherche { 
+    display: flex;
+}
+i { padding: 1.5rem;}
+
+
+.recherche input {
+    padding-right: 3rem;
+    border-right: 1px solid var(--lightgrey)
+    ;
+}
+
+input::placeholder {
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    padding-left: 1rem;
+}
+.recherche button {
+    background-color: blue;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 0 1rem 1rem 0;
+}
+.filtre i {
+    color: blue;
+}
