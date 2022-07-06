@@ -35,6 +35,9 @@ nav a {
 
 #logo  {
     padding: 0 32px;
+    height: 100px;
+    width: 150px;
+  
 }
 
   @media  (max-width: 768px) {
@@ -92,6 +95,7 @@ input::placeholder {
     background-color:#F2F2F2;
     border-radius: 16px 0 0 16px;
 }
+
 .recherche button {
     background-color: #0065FC;
     color: white;
@@ -110,7 +114,22 @@ input::placeholder {
     transform: scale(1.03);
 }
 
+.fas.fa-search {
+    display: none;}
+
+
+@media (max-width: 998px){
+.loupe {display: none;}
+
+.fas.fa-search {
+    display: inline;
+}}
+
 /* Filtres */
+
+.Titre-filtres {
+    margin-left: 32px;
+}
 
 .filtres-liste {
   display: flex;
@@ -182,7 +201,7 @@ input::placeholder {
 
 .appartements-liste > div {
     background-color: #F2F2F2;
-    padding: 60px;
+    padding: 10px;
     border-radius: 16px;
 } 
 
@@ -205,6 +224,7 @@ input::placeholder {
 .populaire {
     order: -1;
 }}
+
 
 /* Hebergement à Marseille */
 
@@ -244,7 +264,7 @@ input::placeholder {
     flex-grow: 1;
     transition: all 0.2s;
     flex-basis: 30%;
-    min-width: 240px;
+    width: 33%;
 }
 
 .appartements-carte:hover {
@@ -289,15 +309,14 @@ input::placeholder {
 }
 
 .populaire-description {
-    flex-basis: 100%;
+   /* flex-basis: 100%;*/
     display: flex;
     flex-direction: column;
 }
 
 .populaire-carte {
     display: flex;
-    min-width: 240px;
-    max-height: 160px;
+    width: 100%;
 }
 
 .populaire-carte .etoiles {
@@ -373,7 +392,8 @@ input::placeholder {
 
 .activites-calanques  { 
     width: 100%;
-    height: 90%;}
+    height: 90%;
+}
 
 .activites-calanques img {
     width: 100%;
@@ -407,18 +427,14 @@ input::placeholder {
     object-fit: cover;
     border-radius: 32px 32px 0 0;
 
-
 }
-
 
 .activites-notredame {
     width: 100%;
     height: 120px;
     margin-bottom: 125px;
 
-
 }
-
 
 .activites-notredame img {
     width: 100%;
@@ -441,7 +457,6 @@ input::placeholder {
     height: 100%;
     object-fit: cover;
     border-radius: 32px 32px 0 0;
-
 
 }
 
@@ -469,155 +484,22 @@ input::placeholder {
     box-shadow: 3px 5px 11px -5px #000000;
 
 }
+@media (max-width :992px){
 
-/*
-
-@media only screen and (min-width: 1px) {
-    .activites-vieuxport, .activites-pomegues, .activites-frioul, .activites-calanques, .activites-notredame, .activites-longchamp {
-        width:100%;
-        height:120px;
-       
-    }
-
-    .colonne1, .colonne2, .colonne3, .colonne4 {
-        width:100%;
-    }
-
-    .activites-calanques {
-        margin-top: 90px;
-        margin-bottom: 120px;
-    }
-
-    .activites-vieuxport {
-        margin-bottom: 90px;
-    }
+.activites-marseille {
+    flex-direction: column;
 }
-*/ 
-
-/*
-@media only screen and (max-width: 1201px ){
-
-
-    .activites-marseille {
-    flex-direction: column ;
-    width: 100%;
+.colonne1 , .colonne2 , .colonne3 , .colonne4 {
     
-    
-    }
-
-
-    .activites-calanques img  {
-        width: 100%;
-        height: 150px;
-    
-    }
+    width: 100% ;
+    margin-bottom: 70px;
 }
-
-@media only screen and (min-width: 1201px ){
-
-    .activites-calanques, .activites-vieuxport {
-        width:100%;
-    }
-
-
-.activites-vieuxport  {
-     height: 400px;}
-
-.activites-vieuxport img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px 32px 0 0;
-
-}
-
-.activites-calanques  { 
-   
-    height: 400px;}
-
-.activites-calanques img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px 32px 0 0;
-    
-}
-
-.activites-pomegues {
-    width: 100%;
-    height: 155px;
-    margin-bottom: 125px;
-}
-
-.activites-pomegues img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px 32px 0 0;
-}
-
-.activites-frioul {
-    width: 100%;
-    height: 120px;
-
-}
-.activites-frioul img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px 32px 0 0;
-
-
 }
 
 
-.activites-notredame {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 125px;
-
-
-}
-
-
-.activites-notredame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px 32px 0 0;
-
-
-}
-
-.activites-longchamp {
-    width: 100%;
-    height: 155px;
-    
-
-}
-
-.activites-longchamp img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px 32px 0 0;
-}
-
-.activites-calanques  {
-
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.activites-vieuxport {
-    margin-bottom: 0px;
-}
-
-}
-*/
     /* Footer */ 
 
-    @media (max-width: 1000px ){
+    @media (max-width: 992px ){
 
         .contenue-footer {
             
