@@ -169,6 +169,8 @@ input::placeholder {
     background-color: lightblue;
     color: #0065FC;
     transform: scale(1.02);
+    cursor: pointer;
+
 }
 
 /* info Resultats recherche */
@@ -216,14 +218,6 @@ input::placeholder {
     flex-basis: 33%;
 }
 
-@media (max-width: 768px){
-    .appartements-liste {
-    flex-direction: column;
-}
-
-.populaire {
-    order: -1;
-}}
 
 
 /* Hebergement à Marseille */
@@ -231,7 +225,7 @@ input::placeholder {
 .ville-appartements-liste {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
     justify-content: space-around;
     margin-bottom: 16px;
 }
@@ -242,17 +236,10 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 16px; 
-    flex-wrap: wrap;
-    flex-basis:100% ;
-    justify-content: space-evenly
 
 }
 
-@media (max-width: 768px){
-    .appartements-liste .populaire-flex {
-        flex-direction: row;
-    }
-}
+
 
 /* Cartes hebergement */
 
@@ -263,8 +250,7 @@ input::placeholder {
     box-shadow: 0 0 16px #0000002e;
     flex-grow: 1;
     transition: all 0.2s;
-    flex-basis: 30%;
-    width: 33%;
+    width: 25%;
 }
 
 .appartements-carte:hover {
@@ -276,8 +262,7 @@ input::placeholder {
     border-radius: 16px 16px 0 0;
     height: 160px;
     width: 100%;
-    object-fit: cover;
-    object-position: top;
+    object-fit:cover;
     
 }
 .appartements-carte p,
@@ -301,11 +286,19 @@ input::placeholder {
     flex-direction: column;
 }
 
-.populaire-carte.appartements-carte img {
-    height: auto;
+.appartements-carte img {
+    height: 150px;
     border-radius: 16px 0 0 16px;
-    width: 40%;
+   /* width: 40%;*/
     margin-right: 10px;
+}
+
+.populaire img {
+    height: 150px;
+    width: 150px;
+   border-radius: 16px 0px 0px 16px;
+   padding: 8px;
+
 }
 
 .populaire-description {
@@ -316,7 +309,10 @@ input::placeholder {
 
 .populaire-carte {
     display: flex;
-    width: 100%;
+   width: 100%; 
+   background-color: white;
+   border-radius: 16px 16px 16px 16px;
+
 }
 
 .populaire-carte .etoiles {
@@ -336,6 +332,8 @@ input::placeholder {
 .populaire h3, .ville h3
  {
     margin-top: 8px; }
+
+
 
     /* Activités à Marseille */
 
@@ -377,7 +375,7 @@ input::placeholder {
 
 .activites-vieuxport img {
     width: 100%;
-    height: 90%;
+    height: 100%;
     object-fit: cover;
     border-radius: 32px 32px 0 0;
 
@@ -392,7 +390,7 @@ input::placeholder {
 
 .activites-calanques  { 
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 
 .activites-calanques img {
@@ -405,7 +403,7 @@ input::placeholder {
 
 .activites-pomegues {
     width: 100%;
-    height: 155px;
+    height: 165px;
     margin-bottom: 125px;
 }
 
@@ -418,7 +416,7 @@ input::placeholder {
 
 .activites-frioul {
     width: 100%;
-    height: 120px;
+    height: 110px;
 
 }
 .activites-frioul img {
@@ -431,7 +429,7 @@ input::placeholder {
 
 .activites-notredame {
     width: 100%;
-    height: 120px;
+    height: 110px;
     margin-bottom: 125px;
 
 }
@@ -447,7 +445,8 @@ input::placeholder {
 
 .activites-longchamp {
     width: 100%;
-    height: 155px;
+    height: 165px;
+    
     
 
 }
@@ -470,7 +469,7 @@ input::placeholder {
     background-color: white;
     font-size: 17px;
     margin: -5px 0px;
-    padding: 30px;
+    padding: 20px;
     border-radius: 0 0 32px 32px;
     box-shadow: 0 0 16px #0000002e;
 
@@ -484,30 +483,9 @@ input::placeholder {
     box-shadow: 3px 5px 11px -5px #000000;
 
 }
-@media (max-width :992px){
-
-.activites-marseille {
-    flex-direction: column;
-}
-.colonne1 , .colonne2 , .colonne3 , .colonne4 {
-    
-    width: 100% ;
-    margin-bottom: 70px;
-}
-}
-
 
     /* Footer */ 
 
-    @media (max-width: 992px ){
-
-        .contenue-footer {
-            
-        flex-direction: column; 
-        margin-left: 32px;
-        }
-        }
-    
 footer {
     background-color:  #F2F2F2;
     height: auto;
@@ -523,4 +501,37 @@ footer {
 
 .contenue-footer a:hover {
     text-decoration: underline black;
+}
+
+/* Responsive*/
+
+@media (max-width: 992px){
+    .populaire-flex {
+       flex-direction: column;
+   }
+   .appartements-liste {
+       flex-direction: column-reverse;
+   }
+   .ville-appartements-liste {
+       flex-direction: column;
+   }
+   .appartements-carte {
+       width: 100%;
+
+   }
+
+   .activites-marseille {
+    flex-direction: column;
+}
+.colonne1 , .colonne2 , .colonne3 , .colonne4 {
+    
+    width: 100% ;
+    height: 150px;
+    margin-bottom: 70px;
+}
+   .contenue-footer {
+            
+    flex-direction: column; 
+    margin-left: 32px;
+    }
 }
