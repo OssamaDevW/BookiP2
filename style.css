@@ -40,13 +40,6 @@ nav a {
   
 }
 
-  @media  (max-width: 768px) {
-      header { 
-       flex-direction: column;
-      }
-    .navbar  { 
-      width: 100%;
-     } }
 
 .navbar2 a {
     flex-basis: 50%;
@@ -118,12 +111,7 @@ input::placeholder {
     display: none;}
 
 
-@media (max-width: 998px){
-.loupe {display: none;}
 
-.fas.fa-search {
-    display: inline;
-}}
 
 /* Filtres */
 
@@ -270,6 +258,7 @@ input::placeholder {
 .populaire-description p,
 .populaire-description h3 {
     margin: 3px;
+    
 }
 .blue {color: #0065FC;}
 
@@ -278,6 +267,7 @@ input::placeholder {
 .appartements-carte .etoiles i {
     padding: 0;
 }
+
 
 /* Liste cartes populaires */
 
@@ -289,7 +279,6 @@ input::placeholder {
 .appartements-carte img {
     height: 150px;
     border-radius: 16px 0 0 16px;
-   /* width: 40%;*/
     margin-right: 10px;
 }
 
@@ -302,7 +291,6 @@ input::placeholder {
 }
 
 .populaire-description {
-   /* flex-basis: 100%;*/
     display: flex;
     flex-direction: column;
 }
@@ -313,10 +301,6 @@ input::placeholder {
    background-color: white;
    border-radius: 16px 16px 16px 16px;
 
-}
-
-.populaire-carte .etoiles {
-    margin-top: auto;
 }
 
 .populaire-description .etoiles i {
@@ -347,12 +331,12 @@ input::placeholder {
     display: flex;
     flex-basis: 100%;     
     width: 100%;   
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     padding: 30px;
     gap: 32px;
     }
 
-
+/*
 .activites-vieuxport {
     border: 1px solid blue;
 }
@@ -368,7 +352,7 @@ input::placeholder {
 
 .colonne4 {
     border: 1px solid black;
-}
+} */
 
 .activites-vieuxport  {
      height: 100%;}
@@ -506,6 +490,12 @@ footer {
 /* Responsive*/
 
 @media (max-width: 992px){
+    .loupe {display: none;}
+    
+    .fas.fa-search {
+        display: inline;
+    }
+ 
     .populaire-flex {
        flex-direction: column;
    }
@@ -517,6 +507,11 @@ footer {
    }
    .appartements-carte {
        width: 100%;
+
+   }
+
+   .ActivitesM {
+    height: 1320px;
 
    }
 
@@ -535,3 +530,12 @@ footer {
     margin-left: 32px;
     }
 }
+@media  (max-width: 768px) {
+    header { 
+     flex-direction: column;
+    }
+  .navbar  { 
+    width: 100%;
+   } 
+   #logo {
+    margin: auto;}}
