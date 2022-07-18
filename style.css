@@ -14,6 +14,7 @@ header {
     display: flex;
 
     justify-content: space-between;
+    align-items: center;
 }
 
 nav {
@@ -35,8 +36,8 @@ nav a {
 
 #logo  {
     padding: 0 32px;
-    height: 100px;
-    width: 150px;
+    height: auto;
+    width: 180px;
   
 }
 
@@ -278,7 +279,7 @@ input::placeholder {
 
 .appartements-carte img {
     height: 150px;
-    border-radius: 16px 0 0 16px;
+    border-radius: 16px 16px 0 0px;
     margin-right: 10px;
 }
 
@@ -300,7 +301,12 @@ input::placeholder {
    width: 100%; 
    background-color: white;
    border-radius: 16px 16px 16px 16px;
+   position: relative;
 
+}
+.populaire-description .etoiles {
+    position: absolute;
+    bottom: 10px;
 }
 
 .populaire-description .etoiles i {
@@ -470,17 +476,23 @@ input::placeholder {
 
     /* Footer */ 
 
+
 footer {
     background-color:  #F2F2F2;
     height: auto;
     width: 100%;
   
 }
+footer a {
+    display: block;
+}
 .contenue-footer {
     margin-top: 7rem;
    display: flex;
    justify-content: space-around;
    font-size: 20px;
+   margin-bottom: 50px;
+
 }
 
 .contenue-footer a:hover {
@@ -539,3 +551,22 @@ footer {
    } 
    #logo {
     margin: auto;}}
+
+    @media (max-width:500px) {
+
+        .populaire-carte {
+    flex-direction: column;
+   height: 300px;
+
+}
+    }
+    @media (max-width : 350px)
+    {
+        .populaire
+        { width: 250px;}
+  
+        .ville {
+            flex-basis: none;
+            width: 100%;
+        }
+    }
