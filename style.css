@@ -26,6 +26,7 @@ nav {
 
 nav a {
     padding: 32px;
+    
     border-top: 3px solid transparent;
 }
 
@@ -548,17 +549,34 @@ footer a {
     }
   .navbar  { 
     width: 100%;
+    display: flex;
+
    } 
+   .filtres-liste {
+       margin-left: 0;
+   }
+   .appartements-liste {
+       margin: 0;
+   }
+  
    #logo {
     margin: auto;}}
 
     @media (max-width:500px) {
 
         .populaire-carte {
-    flex-direction: column;
-   height: 300px;
+   /* flex-direction: column;
+   height: 300px;*/
 
 }
+.populaire img {
+    width: 100px;
+
+}
+.populaire-description p {
+    margin-bottom: 10px;
+}
+
     }
     @media (max-width : 350px)
     {
