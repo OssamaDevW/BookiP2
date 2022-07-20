@@ -481,17 +481,17 @@ footer {
     background-color:  #F2F2F2;
     height: auto;
     width: 100%;
+    
   
 }
 footer a {
     display: block;
 }
 .contenue-footer {
-    margin-top: 7rem;
+    margin-top: 112px;
    display: flex;
    justify-content: space-around;
    font-size: 20px;
-   margin-bottom: 50px;
 
 }
 
@@ -564,9 +564,18 @@ footer a {
     {
         .populaire
         { width: 250px;}
-  
+
         .ville {
-            flex-basis: none;
-            width: 100%;
+            padding: 0;
+            margin: 0;
+
         }
+  
+        .ActivitesM {
+            margin: 0;
+        }
+        .activites-marseille {
+            padding: 0;
+        }
+
     }
