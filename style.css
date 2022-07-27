@@ -6,6 +6,10 @@
 box-sizing: border-box;
     font-family: "raleway"; 
 }
+
+body {
+    margin: 0;
+}
 a {
     color: inherit ;
     text-decoration: none ;
@@ -16,6 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 
 nav {
     display: flex;
@@ -29,6 +34,11 @@ nav a {
     
     border-top: 3px solid transparent;
 }
+.navbar {
+    display: flex;
+    margin: 0;
+}
+
 
 .navbar2 a:hover {
     border-top-color: #0065FC;
@@ -262,6 +272,12 @@ input::placeholder {
     margin: 3px;
     
 }
+
+.nap {
+    font-size: 13px;
+    font-weight: normal;
+}
+
 .blue {color: #0065FC;}
 
 .grey {color: grey;}
@@ -289,12 +305,14 @@ input::placeholder {
     width: 150px;
    border-radius: 16px 0px 0px 16px;
    padding: 8px;
+   transition: all 0.2s;
 
 }
 
 .populaire-description {
     display: flex;
     flex-direction: column;
+
 }
 
 .populaire-carte {
@@ -324,6 +342,10 @@ input::placeholder {
  {
     margin-top: 8px; }
 
+    .populaire-carte:hover {
+        transform: scale(1.02);
+        box-shadow: 3px 5px 11px -5px #000000;
+    }
 
 
     /* Activités à Marseille */
@@ -338,28 +360,11 @@ input::placeholder {
     display: flex;
     flex-basis: 100%;     
     width: 100%;   
-    /*border: 1px solid red;*/
     padding: 30px;
     gap: 32px;
     }
 
-/*
-.activites-vieuxport {
-    border: 1px solid blue;
-}
 
-.activites-calanques {
-    border: 1px solid purple;
-}
-
-
-.colonne2 {
-    border: 1px solid yellow;
-}
-
-.colonne4 {
-    border: 1px solid black;
-} */
 
 .activites-vieuxport  {
      height: 100%;}
@@ -542,6 +547,7 @@ footer a {
     flex-direction: column; 
     margin-left: 32px;
     }
+  
 }
 @media  (max-width: 768px) {
     header { 
@@ -560,14 +566,20 @@ footer a {
    }
   
    #logo {
-    margin: auto;}}
+    margin: auto;}
+
+    .ActivitesM {
+        margin: 0;
+    }
+    .activites-marseille {
+        padding: 0;
+    }
+}
 
     @media (max-width:500px) {
 
         .populaire-carte {
-   /* flex-direction: column;
-   height: 300px;*/
-
+   
 }
 .populaire img {
     width: 100px;
@@ -578,22 +590,4 @@ footer a {
 }
 
     }
-    @media (max-width : 350px)
-    {
-        .populaire
-        { width: 250px;}
-
-        .ville {
-            padding: 0;
-            margin: 0;
-
-        }
-  
-        .ActivitesM {
-            margin: 0;
-        }
-        .activites-marseille {
-            padding: 0;
-        }
-
-    }
+   
